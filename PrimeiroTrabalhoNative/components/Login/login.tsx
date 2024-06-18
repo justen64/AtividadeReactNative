@@ -1,20 +1,27 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native-gesture-handler'
+import { styles } from './styles'
 
 export default function Login() {
- const [nome,setNome]=useState('');
 
   return (
-    <View >
+    <View style={styles.container} >
     <TextInput
-      placeholder="Digite Seu Login"/>
+      placeholder="Digite seu login..."
+      style={styles.inputCaixa}
+      />
     <TextInput 
-      placeholder="Digite sua senha"/>
-     <Text>{nome}</Text>
-    <Button title='Login'  >
-    </Button>
-    <Text>{nome}</Text>
+      placeholder="Digite sua senha..."
+      style={styles.inputCaixa}
+      />
+
+   <TouchableOpacity style={styles.botao}>
+    <Text style={styles.textoBotao}>Entrar</Text>
+   </TouchableOpacity>
+   
+    
+    
   </View>
   )
 }
