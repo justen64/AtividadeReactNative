@@ -9,7 +9,7 @@ export default function Contatos() {
   const [formularioVisivel, setFormilarioVisivel] = useState(false);
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
-  const [contato, setContato] = useState<{id: string; nome: string; telefone: string }[]>([]); //Não entendi muito bem isso
+  const [contato, setContato] = useState<{id: string; nome: string; telefone: string }[]>([]);
 
   const handleNovoContato = () =>{
       setContato([...contato, {id: Date.now().toString(), nome, telefone}])
