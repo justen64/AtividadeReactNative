@@ -1,21 +1,13 @@
-// App.tsx
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import {AnimatedButton} from './components/animacoes/AnimatedButton';
+import { View, Text } from 'react-native'
+import React from 'react'
+import Routes from './routes'
+import Login from './screens/Login'
+import { NavigationContainer } from '@react-navigation/native'
 
-
-function App() {
+export default function App() {
   return (
-    <View style={styles.container}>
-      <AnimatedButton />
-    </View>
-  );
+    <NavigationContainer>
+       <Routes /> 
+    </NavigationContainer> 
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
