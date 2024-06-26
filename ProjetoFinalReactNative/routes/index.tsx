@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Login from '../screens/Login';
 import { ContatosLista } from '../screens/ContatosLista';
 import Sobre from '../screens/Sobre'
-import Empresas from '../screens/Empresas';
+import {Empresas} from '../screens/Empresas';
 
 export default function App() {
   const Drawer = createDrawerNavigator();

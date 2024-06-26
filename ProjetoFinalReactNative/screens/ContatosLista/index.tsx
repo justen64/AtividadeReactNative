@@ -2,7 +2,8 @@ import { View, Text, ActivityIndicator, FlatList, Image, TouchableOpacity, Alert
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import styles from './styles';
-import { Feather as Icon, MaterialCommunityIcons } from '@expo/vector-icons'
+import { Feather as Icon, MaterialCommunityIcons } from '@expo/vector-icons';
+import * as Animatable from 'react-native-animatable'; 
 
 export const ContatosLista = () => {
     const [contacts, setContacts] = useState(null);
@@ -35,9 +36,10 @@ export const ContatosLista = () => {
     useEffect(() => {
         axios.get('https://randomuser.me/api/?results=50&nat=br&inc=name,nat,phone,cell,picture,email')
             .then(({ data }) => {
-                data.results.sort((contact1,contact2) =>
-                (contact1.name.first > contact2.name.first) ? 1 :
-                (contact1.name.first < contact2.name.first) ? -1 : 0           )
+                data.results.sort((contact1, contact2) =>
+                    (contact1.name.first > contact2.name.first) ? 1 :
+                    (contact1.name.first < contact2.name.first) ? -1 : 0
+                );
                 setContacts(data.results);
             })
             .catch(error => {
@@ -52,15 +54,16 @@ export const ContatosLista = () => {
                     <ActivityIndicator size='large' />
                 </View>
             ) : (
-                
+                <Animatable.View animation="fadeInUpBig" duration={5000} style={{ flex: 1 }}>
                     <FlatList
                         data={contacts}
                         keyExtractor={(_, index) => index.toString()}
                         renderItem={ContactCard}
                         ItemSeparatorComponent={<View style={styles.itemSeparator} />}
                     />
-                
+                </Animatable.View>
             )}
         </>
     );
 };
+

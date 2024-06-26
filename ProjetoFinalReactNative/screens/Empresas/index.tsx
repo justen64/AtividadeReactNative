@@ -4,7 +4,7 @@ import EmpresaCard from '../../components/EmpresaCard/EmpresaCard';
 import Button from '../../components/Button/button';
 import { styles } from './style';
 
-const Empresas = () => {
+export const Empresas = () => {
   const [empresas, setEmpresas] = useState([]);
   const [nomeEmpresa, setNomeEmpresa] = useState('');
   const [descricaoEmpresa, setDescricaoEmpresa] = useState('');
@@ -54,7 +54,7 @@ const Empresas = () => {
   );
 };
 
-export default Empresas;
+
 
 
 
