@@ -4,6 +4,7 @@ import axios from 'axios';
 import styles from './styles';
 import { Feather as Icon, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Animatable from 'react-native-animatable'; 
+import ConexaoInternet from '../../components/ConexaoAInternet';
 
 export const ContatosLista = () => {
     const [contacts, setContacts] = useState(null);
@@ -11,6 +12,7 @@ export const ContatosLista = () => {
     const ContactCard = ({ item }) => {
         return (
             <View style={styles.containerCard}>
+                <ConexaoInternet/>
                 <Image
                     source={{ uri: item.picture.thumbnail }}
                     style={styles.containerImage}

@@ -3,6 +3,7 @@ import { View, TextInput, FlatList } from 'react-native';
 import EmpresaCard from '../../components/EmpresaCard/EmpresaCard';
 import Button from '../../components/Button/button';
 import { styles } from './style';
+import ConexaoInternet from '../../components/ConexaoAInternet';
 
 export const Empresas = () => {
   const [empresas, setEmpresas] = useState([]);
@@ -31,6 +32,7 @@ export const Empresas = () => {
 
   return (
     <View style={styles.container}>
+      <ConexaoInternet/>
       <TextInput
         style={styles.input}
         placeholder="Nome da Empresa"

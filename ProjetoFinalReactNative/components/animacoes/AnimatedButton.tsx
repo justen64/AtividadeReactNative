@@ -12,7 +12,7 @@ interface animacao{
 
   const handlePressIn = () => {
     Animated.spring(scaleAnim, {
-      toValue: 1.1,
+      toValue: 0.5,
       useNativeDriver: true,
     }).start();
   };
@@ -20,7 +20,7 @@ interface animacao{
   const handlePressOut = () => {
     Animated.spring(scaleAnim, {
       toValue: 1,
-      friction: 5,
+      friction: 2,
       useNativeDriver: true,
     }).start();
   };
