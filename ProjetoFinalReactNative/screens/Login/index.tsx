@@ -60,6 +60,7 @@ getContato();
       <TextInput
         style={styles.input}
         placeholder="Password"
+        secureTextEntry={true}
         value={senha}
         onChangeText={(texto) => setSenha(texto)}
       />
