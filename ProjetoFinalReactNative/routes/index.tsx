@@ -1,15 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 import Login from '../screens/Login';
-import Contato from '../screens/Login/Contato';
+import { ContactsList } from '../components/ContactsList';
 
-export default function Routes() {
-    const Drawer= createDrawerNavigator();
+export default function App() {
+  const Drawer = createDrawerNavigator();
+
   return (
-<Drawer.Navigator>
-    <Drawer.Screen name ="Login" component={Login}/>
-    <Drawer.Screen name ="Contato" component={Contato}/>
-</Drawer.Navigator>
-  )
+   
+      <Drawer.Navigator>
+        <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen name="Contatos" component={ContactsList} />
+      </Drawer.Navigator>
+    
+  );
 }
