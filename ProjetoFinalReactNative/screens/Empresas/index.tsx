@@ -19,7 +19,7 @@ export const Empresas = () => {
       id: empresas.length + 1,
       nome: nomeEmpresa,
       descricao: descricaoEmpresa,
-      icone: 'building', // Exemplo de ícone FontAwesome
+      icone: 'building', 
     };
     setEmpresas([...empresas, novaEmpresa]);
     setNomeEmpresa('');
