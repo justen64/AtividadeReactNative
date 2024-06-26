@@ -4,7 +4,7 @@ import axios from 'axios';
 import styles from './styles';
 import { Feather as Icon, MaterialCommunityIcons } from '@expo/vector-icons'
 
-export const ContactsList = () => {
+export const ContatosLista = () => {
     const [contacts, setContacts] = useState(null);
 
     const ContactCard = ({ item }) => {
