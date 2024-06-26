@@ -10,7 +10,7 @@ import ConexaoInternet from "../../components/ConexaoAInternet";
 
 export default function Login() {
   interface login {
-    id?: string;
+
     senha: string;
     nomeUsuario: string;
   }
@@ -31,7 +31,6 @@ export default function Login() {
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
         const dados: login = {
-          id: docSnap.id,
           senha: docSnap.data().senha,
           nomeUsuario: docSnap.data().nomeUsuario,
         };
