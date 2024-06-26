@@ -37,7 +37,9 @@ export default function Login() {
         };
         setLogando(dados);
         logando.senha === senha ? setLogado(logando.nomeUsuario) : "";
-        navigation.jumpTo("Contato");
+        navigation.jumpTo("Contatos");
+        setEmail('');
+        setSenha('');
     }else{
         Alert.alert("Erro", "Email ou senha inválidos");
     }
